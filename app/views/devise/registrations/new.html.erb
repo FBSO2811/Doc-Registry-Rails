@@ -1,0 +1,115 @@
+<div class="col-md-10 ml-auto mr-auto">
+  <div class="card card-signup">
+
+    <h2 class="card-title text-center">Register for Free</h2>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-5 ml-auto">
+          <div class="info info-horizontal">
+            <div class="icon icon-rose">
+              <i class="fas fa-landmark"></i>
+            </div>
+            <div class="description">
+              <h4 class="info-title">Prove your documents</h4>
+              <p class="description">
+                Prove to employers, judges, business partners etc that the documents you
+                rely on are genuine.
+              </p>
+            </div>
+          </div>
+          <div class="info info-horizontal">
+            <div class="icon icon-primary">
+              <i class="fas fa-upload"></i>
+            </div>
+            <div class="description">
+              <h4 class="info-title">Publish your documents</h4>
+              <p class="description">
+                Publish documents in a way that means nobody can argue the originality of
+              them.</p>
+            </div>
+          </div>
+          <div class="info info-horizontal">
+            <div class="icon icon-info">
+              <i class="fas fa-clipboard-check"></i>
+            </div>
+            <div class="description">
+              <h4 class="info-title">Check Documents</h4>
+              <p class="description">
+                Check that the documents you are expected to believe originate from the true
+              source.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 mr-auto">
+          <div class="social text-center">
+
+            <button class="btn btn-just-icon btn-round btn-facebook">
+              <i class="fab fa-facebook-f"></i>
+            </button>
+            <button class="btn btn-just-icon btn-round btn-google-plus">
+              <i class="fab fa-google"></i>
+            </button>
+            <button class="btn btn-just-icon btn-round btn-linkedin">
+              <i class="fab fa-linkedin-in"></i></button>
+              <button class="btn btn-just-icon btn-round btn-linkedin">
+                <i class="fab fa-ethereum"></i></button>
+
+                <h4> or be classical </h4>
+              </div>
+
+
+              <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+              <%= render "devise/shared/error_messages", resource: resource %>
+
+              <form class="form" method="" action="">
+
+                <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="material-icons">mail</i>
+                      </span>
+                    </div>
+              <%= f.email_field :email, autofocus: true, placeholder: "Email", :class =>"form-control" %>
+</div>
+</div>
+
+<div class="form-group">
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text">
+        <i class="material-icons">lock_outline</i>
+      </span>
+    </div>
+
+<!--                     <input type="password" placeholder="Password..." class="form-control"/>
+-->
+<%= f.password_field :password, placeholder: "Password min. 6 characters", :class =>"form-control" %>
+
+</div>
+</div>
+<div class="form-check">
+  <label class="form-check-label">
+    <input class="form-check-input" type="checkbox" value="" checked>
+    <span class="form-check-sign">
+      <span class="check"></span>
+    </span>
+    I agree to the
+    <a href="#something">terms and conditions</a>.
+  </label>
+</div>
+<div class="text-center">
+  <%= f.submit "Sign up", :class => "btn btn-primary btn-round" %>
+
+</div>
+</form>
+<% end %>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+

@@ -1,0 +1,76 @@
+
+<div class="col-md-10 ml-auto mr-auto">
+  <div class="card card-signup">
+
+
+    <h2 class="card-title text-center">Edit your account</h2>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-5 ml-auto">
+          <div class="info info-horizontal">
+            <div class="icon icon-rose">
+              <i class="fas fa-upload"></i>
+            </div>
+            <div class="description">
+              <h4 class="info-title">Upload your document</h4>
+              <p class="description">
+                It will be converted to a unique Document Identifier. A different document, with the most minor change, would be represented by a totally different ID.
+              </p>
+            </div>
+          </div>
+          <div class="info info-horizontal">
+            <div class="icon icon-primary">
+              <i class="fas fa-file-signature"></i>
+            </div>
+            <div class="description">
+              <h4 class="info-title">Sign the document</h4>
+              <p class="description">
+                Your private key acts as your signature. Your document’s unique ID will be indelibly associated with your Ethereum wallet.
+              </p>
+            </div>
+          </div>
+          <div class="info info-horizontal">
+            <div class="icon icon-info">
+              <i class="fab fa-ethereum"></i>
+            </div>
+            <div class="description">
+              <h4 class="info-title">Submit the form</h4>
+              <p class="description">
+                When you submit your form, the document’s unique ID will be published from your wallet so people know that it was signed by you, and nobody else.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 mr-auto">
+
+
+<div class="row">
+  <div class="col-md-10" style="margin-top: 18px">
+    <h4>Edit your account</h4>
+    <%= form_with(model: @document, local: true) do |form| %>
+
+    <div class="form-group form-file-upload form-file-multiple bmd-form-group">
+      <input type="file" multiple="" class="inputFileHidden">
+      <div class="input-group" style="margin-bottom: 25px">
+      <%= form.text_field :title, :class=>"form-control inputFileVisible", placeholder: "Title" %>
+        <span class="input-group-btn">
+        </span>
+      </div>
+      <div class="input-group">
+        <input type="text" class="form-control inputFileVisible" placeholder="Single File">
+        <span class="input-group-btn">
+          <button type="button" class="btn btn-link btn-fab btn-primary">
+            <i class="material-icons">attach_file</i>
+          </button>
+        </span>
+      </div>
+    <div class="text-center" style="margin-top: 25px">
+  <%= form.submit "Submit document", :class => "btn btn-primary btn-round" %>
+
+</div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+

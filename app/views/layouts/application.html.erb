@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DocRegistryRails</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body class="signup-page sidebar-collapse">
+
+  <%= render 'shared/navbar' %>
+
+
+  <div class="page-header header-filter" filter-color="purple"
+  style="background-image: url('../assets/img/bg7.jpg'); background-size: cover; background-position: top center;">
+  <div class="container">
+    <div class="row">
+      <%= yield %>
+    </div>
+  </div>
+  <%= render 'shared/footer' %>
+</div>
+<%= render 'shared/corejs' %>
+</body>
+</html>
+

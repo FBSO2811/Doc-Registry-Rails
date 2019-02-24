@@ -1,0 +1,58 @@
+<div class="main main-raised" style="width: 100%; padding-bottom: 350px ">
+<h2 class="title" style="color:black" align="center">Your documents</h2>
+
+<div class="col-lg-11 col-md-10 ml-auto mr-auto">
+  <h4>
+  </h4>
+  <div class="table-responsive">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Document #</th>
+          <th class="text-center">Document name</th>
+                    <th lass="text-center">Open document</th>
+                    <th lass="text-center">Blockchain</th>
+
+          <th lass="text-center">Date of publishing</th>
+
+          <th class="text-left">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+                      <% @documents.each do |document| %>
+
+
+        <tr>
+          <td class="text-center" style="color: black"><%= document.id  %></td>
+          <td class="text-center" style="color: black"><%= document.title  %></td>
+          <td class="text-left" style="color: black">
+            <%= link_to "Open the document", document.attached_document, target: :_blank %>
+
+          </td>
+
+          <td class="text-left" style="color: black">Add yakko code</td>
+
+          <td class="text-left" style="color: black"><%= document.created_at  %></td>
+
+          <td class="td-actions text-center">
+            <%= link_to 'Destroy', @document, method: :delete, data: { confirm: 'You are deleting the file form our database, not the blockchain. Are you sure?' } %>
+<!--             <button type="button" rel="tooltip" class="btn btn-danger btn-just-icon btn-sm" data-original-title="" title="">
+              <i class="material-icons">close</i>
+            </button> -->
+          </td>
+
+        </tr>
+
+                                <% end %>
+
+
+      </tbody>
+
+    </table>
+  </div>
+</div>
+</div>
+
+
+<!-- -->
